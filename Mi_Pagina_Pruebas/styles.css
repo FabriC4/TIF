@@ -1,275 +1,169 @@
-/* Estilo general del cuerpo de la página */
+/* --- Estilo General del Cuerpo de la Página --- */
 body {
-    font-family: 'Times New Roman', Times, serif, sans-serif;
-    /* Fuente del texto */
-    background-image: url('imagenes/allianzArena.jpg');
-    /* Imagen de fondo */
-    background-size: cover;
-    /* Hace que la imagen cubra todo el fondo */
-    background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
-    background-position: center;
-    /* Centra la imagen en la pantalla */
-    background-attachment: fixed;
-    /* La imagen se mantiene fija mientras haces scroll */
-    color: rgb(255, 255, 255);
-    /* Color del texto */
-    margin: 0;
-    /* Elimina el margen predeterminado del navegador */
-    padding: 100px;
-    /* Espacio dentro del cuerpo de la página */
-    padding-top: 150px; 
-    /* Ajusta el valor según el tamaño del rectángulo */
+    font-family: 'Times New Roman', Times, serif, sans-serif; /* Fuente del texto */
+    background-image: url('imagenes/allianzArena.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Hace que la imagen cubra todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-attachment: fixed; /* La imagen se mantiene fija mientras haces scroll */
+    color: rgb(255, 255, 255); /* Color del texto */
+    margin: 0; /* Elimina el margen predeterminado del navegador */
+    padding: 100px; /* Espacio dentro del cuerpo de la página */
+    padding-top: 150px; /* Ajusta el valor según el tamaño del rectángulo */
 }
 
-
-/* Estilo del contenedor del rectángulo transparente */
+/* --- Estilo del Contenedor del Rectángulo Transparente --- */
 .rectangulo-transparente {
-    background-color: rgba(0, 64, 155, 0.8);
-    /* Blanco semitransparente */
-    padding: 20px;
-    /* Espacio interno del rectángulo */
-    border-radius: 10px;
-    /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra para dar efecto de flotante */
-    width: 100%;
-    /* Ocupa todo el ancho disponible */
-    box-sizing: border-box;
-    /* Incluye el padding y el borde en el ancho total */
-    position: fixed;
-    /* Fija el rectángulo en la parte superior */
+    background-color: rgba(0, 64, 155, 0.8); /* Blanco semitransparente */
+    padding: 20px; /* Espacio interno del rectángulo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de flotante */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+    position: fixed; /* Fija el rectángulo en la parte superior */
     top: 0;
     left: 0;
-    z-index: 1000;
-    /* Asegura que el rectángulo esté encima de otros elementos */
+    z-index: 1000; /* Asegura que el rectángulo esté encima de otros elementos */
 }
 
-/* Estilo para el contenedor del logo y el título */
+/* --- Estilo del Contenedor de la Cabecera --- */
+header {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 0;
+    margin: 0; /* Elimina márgenes */
+}
+
+.header-container {
+    display: flex; /* Flexbox para alinear los elementos en línea */
+    justify-content: space-between; /* Distribuye el espacio entre el título y el login */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+}
+
+/* --- Estilo del Logo y Título --- */
 .logo-titulo-container {
     display: flex;
-    align-items: center;
-    /* Alinea verticalmente el logo y el título */
+    align-items: center; /* Alinea verticalmente el logo y el título */
 }
 
-/* Estilo para el logo */
 .logo {
     height: 50px; /* Ajusta el tamaño */
     width: auto; /* Mantiene la proporción de la imagen */
     margin-right: 15px; /* Espacio entre el logo y el título */
 }
 
-
-
-/* Estilo del contenedor de la cabecera */
-header {
-    width: 100%;
-    /* Ocupa todo el ancho disponible */
-    padding: 0;
-    margin: 0;
-    /* Elimina márgenes */
-}
-
-/* Espaciado entre titulo y login */
-.header-container {
-    display: flex;
-    /* Flexbox para alinear los elementos en línea */
-    justify-content: space-between;
-    /* Distribuye el espacio entre el título y el login */
-    align-items: center;
-    /* Alinea verticalmente los elementos en el centro */
-}
-
-
-/* Estilo para el título con marco */
 .titulo-con-marco {
-    border: 3px solid white;
-    /* Borde blanco alrededor del título */
-    padding: 10px;
-    /* Espacio interno dentro del borde */
-    border-radius: 10px;
-    /* Bordes redondeados */
-    background-color: rgba(0, 49, 162, 0.7);
-    /* Fondo azul semitransparente */
+    border: 3px solid white; /* Borde blanco alrededor del título */
+    padding: 10px; /* Espacio interno dentro del borde */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: rgba(0, 49, 162, 0.7); /* Fondo azul semitransparente */
 }
 
-/* Estilo para el contenedor del login */
+/* --- Estilo del Login --- */
 .login-container {
-    display: flex;
-    /* Flexbox para alinear el formulario y el enlace */
-    align-items: center;
-    /* Alinea verticalmente los elementos en el centro */
+    display: flex; /* Flexbox para alinear el formulario y el enlace */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
 }
 
-/* Estilo para los campos del formulario de login */
 .login-container input[type="email"],
 .login-container input[type="password"] {
-    margin-right: 10px;
-    /* Espacio entre los campos y el botón */
-    padding: 5px;
-    /* Espacio interno dentro de los campos */
-    border: 1px solid white;
-    /* Borde blanco */
-    border-radius: 5px;
-    /* Bordes redondeados */
-    background-color: rgba(255, 255, 255, 0.2);
-    /* Fondo blanco semitransparente */
-    color: white;
-    /* Color del texto en los campos */
+    margin-right: 10px; /* Espacio entre los campos y el botón */
+    padding: 5px; /* Espacio interno dentro de los campos */
+    border: 1px solid white; /* Borde blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco semitransparente */
+    color: white; /* Color del texto en los campos */
 }
 
-/* Estilo para el botón de login */
 .login-container input[type="submit"] {
-    padding: 5px 10px;
-    /* Espacio interno dentro del botón */
-    border: 1px solid white;
-    /* Borde blanco */
-    border-radius: 5px;
-    /* Bordes redondeados */
-    background-color: rgba(42, 35, 132, 0.7);
-    /* Fondo azul oscuro semitransparente */
-    color: white;
-    /* Color del texto en el botón */
-    cursor: pointer;
-    /* Cursor de puntero al pasar sobre el botón */
+    padding: 5px 10px; /* Espacio interno dentro del botón */
+    border: 1px solid white; /* Borde blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: rgba(42, 35, 132, 0.7); /* Fondo azul oscuro semitransparente */
+    color: white; /* Color del texto en el botón */
+    cursor: pointer; /* Cursor de puntero al pasar sobre el botón */
 }
 
-/* Estilo para el enlace de registrarse */
 .login-container a {
-    color: white;
-    /* Color del texto del enlace */
-    text-decoration: none;
-    /* Elimina el subrayado del enlace */
-    margin-left: 10px;
-    /* Espacio entre el enlace y el formulario */
+    color: white; /* Color del texto del enlace */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    margin-left: 10px; /* Espacio entre el enlace y el formulario */
 }
 
-/* Estilo para la navegación */
+/* --- Estilo de la Navegación --- */
 nav {
     font-size: 20px; 
-    text-align: center;
-    /* Centra el contenido del nav horizontalmente */
-    display: flex;
-    /* Para alinear el texto y la imagen horizontalmente */
-    align-items: center;
-    /* Alinea verticalmente el texto con la imagen */
-    justify-content: center;
-    /* Centra el contenido horizontalmente */
-    margin: 10px 0;
-    /* Espacio entre los enlaces */
-    padding: 10px;
-    /* Espacio interno de los enlaces */
-    text-decoration: none;
-    /* Elimina el subrayado de los enlaces */
-    color: white;
-    /* Color del texto del enlace */
-    background-color: rgba(66, 94, 253, 0.477);
-    /* Fondo azul semitransparente */
-    border: 2px solid rgb(0, 0, 0);
-    /* Borde blanco alrededor del enlace */
-    border-radius: 50px;
-    /* Bordes redondeados */
+    text-align: center; /* Centra el contenido del nav horizontalmente */
+    display: flex; /* Para alinear el texto y la imagen horizontalmente */
+    align-items: center; /* Alinea verticalmente el texto con la imagen */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    margin: 10px 0; /* Espacio entre los enlaces */
+    padding: 10px; /* Espacio interno de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Color del texto del enlace */
+    background-color: rgba(66, 94, 253, 0.477); /* Fondo azul semitransparente */
+    border: 2px solid rgb(0, 0, 0); /* Borde blanco alrededor del enlace */
+    border-radius: 50px; /* Bordes redondeados */
 }
 
-/* Estilo para la sección principal */
+/* --- Estilo de la Sección Principal --- */
 main {
     text-align: center;
     font-size: 18px;
-    margin: 20px 0;
-    /* Centra el contenido principal horizontalmente */
+    margin: 20px 0; /* Centra el contenido principal horizontalmente */
 }
 
-/* Estilo para los enlaces dentro de la sección principal */
 main a {
     font-size: 18px; 
-    display: flex;
-    /* Para alinear el texto y la imagen horizontalmente */
-    align-items: center;
-    /* Alinea verticalmente el texto con la imagen */
-    justify-content: center;
-    /* Centra el contenido horizontalmente */
-    width: 80%; 
-    /* Reduce el ancho al 80% del contenedor */
-    margin: 10px auto;
-    /* Espacio entre los enlaces */
-    padding: 10px;
-    /* Espacio interno de los enlaces */
-    text-decoration: none;
-    /* Elimina el subrayado de los enlaces */
-    color: white;
-    /* Color del texto del enlace */
-    background-color: rgba(0, 49, 162, 0.7);
-    /* Fondo azul semitransparente */
-    border: 2px solid rgb(0, 0, 0);
-    /* Borde blanco alrededor del enlace */
-    border-radius: 10px;
-    /* Bordes redondeados */
-    
+    display: flex; /* Para alinear el texto y la imagen horizontalmente */
+    align-items: center; /* Alinea verticalmente el texto con la imagen */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    width: 80%; /* Reduce el ancho al 80% del contenedor */
+    margin: 10px auto; /* Espacio entre los enlaces */
+    padding: 10px; /* Espacio interno de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Color del texto del enlace */
+    background-color: rgba(0, 49, 162, 0.7); /* Fondo azul semitransparente */
+    border: 2px solid rgb(0, 0, 0); /* Borde blanco alrededor del enlace */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
-/* Estilo para las imágenes dentro de los enlaces */
 main a img.icono {
-    margin-right: 10px;
-    /* Espacio entre la imagen y el texto */
-    height: 60px;
-    /* Altura de las imágenes */
-    width: 60px;
-    /* Anchura de las imágenes */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    height: 60px; /* Altura de las imágenes */
+    width: 60px; /* Anchura de las imágenes */
 }
 
-
-
-.recent-topics li{
-    list-style-type: none;
-    /* Elimina los puntos de la lista */
-    text-align: center;
-    /* Centra el contenido del nav horizontalmente */
-    display: flex;
-    /* Para alinear el texto y la imagen horizontalmente */
-    align-items: center;
-    /* Alinea verticalmente el texto con la imagen */
-    justify-content: center;
-    /* Centra el contenido horizontalmente */
-    background-color: rgb(255, 255, 255);
-    /* Fondo azul semitransparente */
-    border: 2px solid rgb(0, 0, 0);
-    /* Bordes redondeados */
-    background-color: rgba(0, 64, 155, 0.8);
-    /* Blanco semitransparente */
-    width: 90%; 
-    /* Reduce el ancho al 80% del contenedor */
-    margin: 10px auto;
-    /* Espacio entre los enlaces */
-    padding: 10px;
-    /* Espacio interno de los enlaces */
-    border-radius: 10px;
-    /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra para dar efecto de flotante */
-    box-sizing: border-box;
-    /* Incluye el padding y el borde en el ancho total */
+/* --- Estilo de la Lista de Temas Recientes --- */
+.recent-topics li {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    text-align: center; /* Centra el contenido del nav horizontalmente */
+    display: flex; /* Para alinear el texto y la imagen horizontalmente */
+    align-items: center; /* Alinea verticalmente el texto con la imagen */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    background-color: rgba(0, 64, 155, 0.8); /* Blanco semitransparente */
+    border: 2px solid rgb(0, 0, 0); /* Bordes redondeados */
+    width: 90%; /* Reduce el ancho al 80% del contenedor */
+    margin: 10px auto; /* Espacio entre los enlaces */
+    padding: 10px; /* Espacio interno de los enlaces */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de flotante */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
 }
 
-.recent-topics img.icono{
-    margin-right: 20px;
-    /* Espacio entre la imagen y el texto */
-    height: 60px;
-    /* Altura de las imágenes */
-    width: 60px;
-    /* Anchura de las imágenes */
+.recent-topics img.icono {
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    height: 60px; /* Altura de las imágenes */
+    width: 60px; /* Anchura de las imágenes */
 }
 
-/* Estilo para el pie de página */
+/* --- Estilo del Pie de Página --- */
 footer {
-    margin-top: 50px;
-    /* Espacio superior antes del pie de página */
+    margin-top: 50px; /* Espacio superior antes del pie de página */
 }
 
-/* Estilo para los enlaces dentro del pie de página */
 footer a {
-    color: rgb(255, 255, 255);
-    /* Color del texto del enlace */
-    text-decoration: none;
-    /* Elimina el subrayado del enlace */
+    color: rgb(255, 255, 255); /* Color del texto del enlace */
+    text-decoration: none; /* Elimina el subrayado del enlace */
 }
+
 
